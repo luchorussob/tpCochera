@@ -1,0 +1,45 @@
+@startuml
+class Vehiculos.Moto {
+- String marca
+- int cilindrada
+}
+class SistemaGaraje.Garaje {
+- double precioRueda
+- int capacidadMaxima
+- int capacidadActualAuto
+- int capacidadActualMoto
+- boolean lleno
+- double mediaKM
+- ArrayList<Auto> autos
+- ArrayList<Moto> motos
++ <<Create>> Garaje(double,int)
++ <<Create>> Garaje(double,int,int,int)
++ double getPrecioRueda()
++ void setPrecioRueda(double)
++ int getCapacidadMaxima()
++ void setCapacidadMaxima(int)
++ int getCapacidadActualAuto()
++ void setCapacidadActualAuto(int)
++ int getCapacidadActualMoto()
++ void setCapacidadActualMoto(int)
++ boolean isLleno()
++ void setLleno(boolean)
++ double getMediaKM()
++ void setMediaKM(double)
++ ArrayList<Auto> getAutos()
++ void setAutos(ArrayList<Auto>)
++ ArrayList<Moto> getMotos()
++ void setMotos(ArrayList<Moto>)
+}
+class Vehiculos.Auto {
+- String marca
+- int numeroPuertas
+}
+class SistemaGaraje.GarajeTest {
++ <<Create>> GarajeTest(double,int)
++ <<Create>> GarajeTest(double,int,int,int)
+}
+
+
+SistemaGaraje.Garaje <|-- SistemaGaraje.GarajeTest
+@enduml
