@@ -1,7 +1,7 @@
 package Mundial;
 
 import java.util.Date;
-
+import java.util.Date;
 public class Partido {
     private Date fecha;
     private Equipo local;

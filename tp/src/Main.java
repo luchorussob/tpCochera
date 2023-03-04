@@ -1,5 +1,5 @@
 import Mundial.*;
-
+import SistemaGaraje.*;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -151,7 +151,7 @@ public class Main {
         octavosFinal.addPartido(new Partido(new Date(),primerosGrupoF.get(0),primerosGrupoE.get(1),new Resultado()));
         octavosFinal.addPartido(new Partido(new Date(),primerosGrupoH.get(0),primerosGrupoG.get(1),new Resultado()));
 
-        System.out.println("\n Los equipos que pasaron a octavos son: \n ");
+        System.out.println("\n Los equipos que pasan a octavos de final son: \n ");
         for (int i=0 ; i<primerosGrupoA.size() ; i++){
             System.out.println(primerosGrupoA.get(i).getNombre());
         }
@@ -188,7 +188,7 @@ public class Main {
         cuartosDeFinal.setDescripcionEtapa("cuartos de final");
         ArrayList<Equipo> pasanDeOctavos = octavosFinal.getEquiposQueAvanzan();
 
-        System.out.println("\n Los equipos que pasan a cuartos son: \n ");
+        System.out.println("\n Los equipos que pasan a cuartos de final son: \n ");
         for (int i=0 ; i<pasanDeOctavos.size() ; i++){
             System.out.println(pasanDeOctavos.get(i).getNombre());
         }
@@ -201,7 +201,7 @@ public class Main {
 
         ArrayList<Equipo> pasanDeCuartos = cuartosDeFinal.getEquiposQueAvanzan();
 
-        System.out.println("\nLos equipos que llegan a semis son: \n ");
+        System.out.println("\nLos equipos que pasan a la semifinal son: \n ");
 
         for (int i=0 ; i<pasanDeCuartos.size() ; i++){
             System.out.println(pasanDeCuartos.get(i).getNombre());
@@ -216,7 +216,7 @@ public class Main {
         // FINAL
         ArrayList<Equipo> pasanDeSemifinal = semiFinal.getEquiposQueAvanzan();
 
-        System.out.println("\n Los equipos que llegaron a la final son: ");
+        System.out.println("\n Los equipos que pasan a la final son: ");
 
         for (int i=0 ; i<pasanDeSemifinal.size() ; i++){
             System.out.println(pasanDeSemifinal.get(i).getNombre());
@@ -229,7 +229,7 @@ public class Main {
 
         // Ganador del mundial
         ArrayList<Equipo> ganador = partidoFinal.getEquiposQueAvanzan();
-        System.out.println("\n El ganador de Catar 2022 es " + ganador.get(0).getNombre());
+        System.out.println("\n El campeón del mundial Catar 2022 es " + ganador.get(0).getNombre());
     }
 
 }
