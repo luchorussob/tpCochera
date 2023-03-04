@@ -5,36 +5,42 @@ import java.util.ArrayList;
 public class EtapaMundial {
     private String descripcionEtapa;
     private ArrayList<Partido>partidos;
-    private ArrayList<Equipo>equipoQueAvanza;
+    public ArrayList<Equipo>equiposQueAvanzan;
 
     public EtapaMundial(String descripcionEtapa, ArrayList<Partido> partidos){
         this.descripcionEtapa=descripcionEtapa;
         this.partidos=new ArrayList<Partido>(partidos);
     }
     public EtapaMundial(){
-        this.equipoQueAvanza=new ArrayList<Equipo>(equipoQueAvanza);
+
+        this.equiposQueAvanzan=new ArrayList<Equipo>(equiposQueAvanzan);
     }
     public String getDescripcionEtapa() {
+
         return descripcionEtapa;
     }
 
     public void setDescripcionEtapa(String descripcionEtapa) {
+
         this.descripcionEtapa = descripcionEtapa;
     }
 
-    public ArrayList<Equipo> getEquipoQueAvanza() {
-        return equipoQueAvanza;
+    public ArrayList<Equipo> getEquiposQueAvanzan() {
+
+        return equiposQueAvanzan;
     }
 
-    public void setEquipoQueAvanza(ArrayList<Equipo> equipoQueAvanza) {
-        this.equipoQueAvanza = equipoQueAvanza;
-    }
 
     public ArrayList<Partido> getPartidos() {
+
         return partidos;
     }
 
     public void setPartidos(ArrayList<Partido> partidos) {
+
         this.partidos = partidos;
+    }
+
+    public void addPartido(Partido partido){this.partidos.add(partido);
     }
 }
